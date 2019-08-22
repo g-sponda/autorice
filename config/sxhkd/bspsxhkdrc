@@ -14,6 +14,7 @@
 XF86AudioRaiseVolume
     dash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
 
+
 XF86AudioLowerVolume
     dash -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
 
@@ -53,7 +54,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # focus the node in the given direction
@@ -110,7 +111,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the last node/desktop
-super + {grave,Tab}
+alt + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
@@ -134,3 +135,11 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# Firefox
+super + x
+    firefox 
+
+# Dolphin
+super + e
+    thunar

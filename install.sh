@@ -8,7 +8,7 @@ export LINKDOT=$PWD
 sudo pacman -S ttf-joypixels ttf-croscore noto-fonts-cjk noto-fonts \
     ttf-fantasque-sans-mono ttf-linux-libertine rofi mpv maim \
     alacritty alacritty-terminfo compton neofetch dash neovim \
-    feh sxhkd bspwm i3-gaps dunst zathura-pdf-mupdf libnotify \
+    feh sxhkd bspwm dunst zathura-pdf-mupdf libnotify \
     diff-so-fancy zsh-autosuggestions zsh-syntax-highlighting \
     xorg-server xorg-xinit xorg-xprop pulseaudio-alsa exa xclip
 

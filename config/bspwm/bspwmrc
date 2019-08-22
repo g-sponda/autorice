@@ -11,11 +11,12 @@
 #  https://github.com/baskerville/bspwm
 #
 
-bspc monitor -d 0 1 2 3 4 5 6 7 8 9 
+bspc monitor DP2-2 -d 1 2 3 4 5 6 7 
+bspc monitor eDP1 -d 8 9 0
 
 bspc config border_width          0
-bspc config window_gap            25
-bspc config top_padding           25
+bspc config window_gap            5
+bspc config top_padding           5
 bspc config split_ratio           0.52
 bspc config borderless_monocle    true
 bspc config gapless_monocle       false 
@@ -30,4 +31,4 @@ sleep 0.1
 compton --config ~/.config/compton/bspcompton.conf &
 feh --bg-fill --no-fehbg --randomize ~/Images/Wallpapers &
 sxhkd -c ~/.config/sxhkd/bspsxhkdrc &
-polybar bspwm
+$HOME/.config/polybar/launch.sh
