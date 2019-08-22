@@ -42,7 +42,7 @@ sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 sudo install -Dm 644 other/freetype2.sh /etc/profile.d/
 sudo install -Dm 644 other/local.conf /etc/fonts/
 sudo install -Dm 644 other/dashbinsh.hook /usr/share/libalpm/hooks/
-sudo install -Dm 644 other/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
+sudo install -Dm 644 other/analog-output.conf.common /usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
 
 # Make some folders. Screenshots will go in the captures folder.
 mkdir -p ~/.config ~/.aurpkgs ~/Images/Captures ~/Images/Wallpapers \

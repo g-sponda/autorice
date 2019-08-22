@@ -143,3 +143,7 @@ super + x
 # Dolphin
 super + e
     thunar
+
+# Lockscreen
+ctrl + alt + l
+    $HOME/.config/scripts/lockscreen
