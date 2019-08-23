@@ -12,7 +12,8 @@
 ;
 
 [bar/top]
-monitor = eDP1
+;monitor = eDP-1-1
+monitor = eDP-1
 width = 100%
 height = 35 
 offset-x = 0
@@ -35,8 +36,8 @@ font-0 = Noto Sans:pixelsize=13;0
 font-1 = FontAwesome:size=10;-2
 font-2 = siji:pixelsize=10;0
 
-modules-left = dis bspwm xwindow
-modules-center = spotify
+modules-left = bspwm xwindow
+;modules-center = spotify
 modules-right = xbacklight wlan volume date battery powermenu
 
 ;tray-position = right
@@ -54,7 +55,7 @@ height = 35
 offset-x = 0
 offset-y = -1 
 ;bottom = true
-monitor = DP2-2
+monitor = DP-1-2-2
 
 background = #5a000000
 foreground = #eee

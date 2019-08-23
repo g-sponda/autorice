@@ -21,13 +21,17 @@ XF86AudioLowerVolume
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+XF86Audio{Play,Stop,Prev,Next}
+    mpc {toggle,stop,prev,next}
+
+
 # Terminal Emulator
 super + Return
-    alacritty	
+    termite
 
 # Program Launcher
 super + space
-    rofi -show run	
+  rofi -modi drun,run -show drun -font "SF Pro Display 12" -show-icons -columns 4 -display-drun 
 
 # Reload this sxhkd config file 
 super + Escape
@@ -59,7 +63,7 @@ super + {_,shift + }q
 
 # focus the node in the given direction
 # hold shift to switch nodes in that direction
-super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # set the window state
@@ -91,11 +95,11 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+super + alt + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # set the node flags
@@ -121,7 +125,7 @@ super + {o,i}
 	bspc wm -h on
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -129,11 +133,11 @@ super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
+super + ctrl + Escape
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + ctrl + shift + Escape
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 # Firefox
@@ -143,6 +147,10 @@ super + x
 # Dolphin
 super + e
     thunar
+
+# LXTM
+super + l
+    lxtm
 
 # Lockscreen
 ctrl + alt + l

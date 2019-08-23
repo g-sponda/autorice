@@ -28,6 +28,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-[ $XDG_VTNR = 1 ] && exec bspwm
-[ $XDG_VTNR = 2 ] && exec i3 
+[ $XDG_VTNR = 1 ] && exec dbus-launch bspwm 
 exec $1
